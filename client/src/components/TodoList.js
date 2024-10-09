@@ -156,7 +156,7 @@ export default function TodoList() {
       ) : (
         <div>
           {data.todos?.length === 0 ? (
-            <p>No todos found.</p>
+            <p>Add something Aggie!</p>
           ) : (
             <Table striped bordered hover className='mt-3'>
               <thead>
