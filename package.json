@@ -12,8 +12,8 @@
     "server": "node server/index.js",
     "dev": "nodemon server/index.js",
     "start": "concurrently \"npm run server\" \"npm run client\"",
-    "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
+    "build": "npm install && npm install --prefix client && npm run build --prefix client",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "keywords": [],
   "author": "",
