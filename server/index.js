@@ -16,12 +16,17 @@ connectDB();
 
 const port = process.env.PORT || 3000;
 
-app.use(cors());
+// Configure CORS to allow requests from your frontend URL
+app.use(
+  cors({
+    origin: process.env.CORS_ORIGIN || "http://localhost:3000",
+  })
+);
 app.use(
   "/graphql",
   graphqlHTTP({
     schema,
-    graphiql: process.env.NODE_ENV === "production" ? false : true,
+    graphiql: process.env.NODE_ENV === "production",
   })
 );
 
